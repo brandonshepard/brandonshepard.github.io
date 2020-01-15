@@ -1,0 +1,36 @@
+body {
+    padding-left: 11em;
+    font-family: Verdana, Georgia, Tahoma, sans-serif;
+    color: navy;
+    background-color: white;
+    width: 400px;
+}
+h1 {
+    font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+}
+ul.navbar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 2em;
+    left: 1em;
+    width: 9em;
+}
+ul.navbar li {
+    background-color: rgb(12, 194, 201);
+    margin: 0.5em 0;
+    padding: 0.3em;
+    border-right: 1em solid yellow;
+}
+ul.navbar a {
+    text-decoration: none;
+}
+a:link, a:visited {
+    color: black;
+}
+a:hover{
+    color: navy;
+    background-color: yellow;
+    border: 1px solid yellow;
+}
