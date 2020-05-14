@@ -17,9 +17,62 @@
         <!-- Main content -->
         <section style="color: black;">
             <h1>Regex Knowledge Base</h1>
+            <a href="https://regexr.com/" target="_blank">regexr.com</a>
             <p>Using emerson's essay on self reliance</p>
             <br>
-            
+
+            <table>
+                <tr>
+                    <th>\w</th>
+                    <td>word <code>[A-Za-z0-9_]</code></td>
+                </tr>
+                <tr>
+                    <th>\W</th>
+                    <td>not word <code>[^A-Za-z0-9_]</code></td>
+                </tr>
+                <tr>
+                    <th>^</th>
+                    <td>negate set<code>[^chars]</code>></td>
+                </tr>
+                <tr>
+                    <th>\d</th>
+                    <td>digit <code>[0-9]</code></td>
+                </tr>
+                <tr>
+                    <th>\D</th>
+                    <td>not digit</td>
+                </tr>
+                <tr>
+                    <th>^</th>
+                    <td>begins with <code>^[Stuff]</code></td>
+                </tr>
+                <tr>
+                    <th>$</th>
+                    <td>ends with <code>[Stuff]$</code></td>
+                </tr>
+                <tr>
+                    <th>{ n }</th>
+                    <td>match n times</td>
+                </tr>
+                <tr>
+                    <th>{ n, m }</th>
+                    <td>Match n to m times</td>
+                </tr>
+                <tr>
+                    <th>( word )</th>
+                    <td>grouping</td>
+                </tr>
+                <tr>
+                    <th>|</th>
+                    <td>logical OR</td>
+                </tr>
+            </table>
+
+            <p><b>Find and replace:</b> <code>(\d{3})-(\d{3})-(\d{4})</code> replace with <code>$1.$2.$3</code><br>
+                123-234-3456 -> 123.234.3456
+                <br>This will replace the dashes with periods, and it works by identifying each parenthesis item
+                and associating a $foo for each starting with $1</p>
+            <br>
             <b>Exercise 1</b>
             <ol>
                 <li><i>How many times does the world 'self' appear?</i><br>
