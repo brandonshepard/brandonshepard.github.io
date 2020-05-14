@@ -5,6 +5,9 @@ body {
     background-color: white;
     width: 400px;
 }
+body.p {
+    color: black;
+}
 h1 {
     font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
 }

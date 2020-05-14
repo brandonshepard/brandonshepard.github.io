@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Regex</title>
+        <link href="../styles.css" rel="stylesheet">
+    </head>
+<body>
+        <!-- Site navigation menu -->
+        <ul class="navbar">
+            <li><a href="../index.html">Home</a>
+            <li><a href="../recipes/recipes.html">Recipes</a>
+            <li><a href="">Books</a>
+            <li><a href="./kb.html">Knowledge</a>
+        </ul>
+
+        <!-- Main content -->
+        <section style="color: black;">
+            <h1>Regex Knowledge Base</h1>
+            <p>Using emerson's essay on self reliance</p>
+            <br>
+            
+            <b>Exercise 1</b>
+            <ol>
+                <li><i>How many times does the world 'self' appear?</i><br>
+                [sS]elf appears 64 times
+                <li><i>Count himself, herself, itself, myself, yourself, thyself</i><br>
+                Individually:
+                himself 20 times, herself 0, itself 12, myself 6, yourself 7, thyself 1
+                Collectively:
+                .[hot ][iemuh][yrtm]self showed 46 times
+                <li><i>Using 3 literal characters and 3 wildcard characters, match: please palace, parade</i><br>
+                p..a.e 11 times
+            </ol>
+            
+            <b>Exercise 2</b>
+            <ol>
+                <li><i>Match both 'lives' and 'lived'</i><br>
+                'live[sd] 7 matches
+                <li><i>Match 'virtue' but not 'virtues'</i><br>
+                virtue[^s] 14 matches
+                <li><i>Match the numbers and periods on all numbered paragraphs</i><br>
+                '\d\.' 4 matches
+                <i>Find the 16 character word that starts with 'c':</i><br>
+                c\w\w\w\w\w\w\w\w\w\w\w\w\w\w\w circumnavigation
+            
+            </ol>
+            <b>Exercise 3</b>
+            <ol>
+                <li><i>Match: self, himself, herself, itself, myself, yourself, thyself:</i><br>
+                ' \w*self' had 61 matches
+                <li><i>Match both 'virtue' and 'virtues'</i><br>
+                'virtues?' 16 matches
+                <li><i>Use quantified repetition to find the word that starts with 'T' and has 12 letters</i><br>
+                'T\w{11}' is Tranquillity
+                <li><i>Match all text inside quotation marks, but nothing that is not inside them</i><br>
+                '"(.|\n)+?"' note need to know difference between greedy and lazy (this one is lazy)
+            </ol>
+            
+            <b>Notes</b>
+            <ul>
+                <li>Lazy vs Greedy<br>
+                #TODO use ? to enable lazy
+                
+                <li>grouping with parenthesis<br>'(in)?dependent'
+                
+                <li>find and replace works via grouping <br>
+                find '(\d{3})-(\d{3})-(\d{4})' replace $1.$2.$3
+                
+            </ul>
+            
+            <b>Exercise 4</b>
+            <ol>
+                <li><i>Match 'myself', 'yourself', 'thyself', but not 'himself', 'herself', 'itself':</i><br>
+                '(my|your|thy)self'
+                <li><i>Match good, goodness and goods, without typing good more than once</i><br>
+                'good(s|ness)?'
+                <li><i>Match 'do' or 'does' followed by 'no', 'not', or 'nothing', even when it occurs at the start of a sentence</i><br>
+                (do|does|Do|Does) (no|not|nothing)' better is '[dD]o(es)? no(t(hing)?)?'    
+            </ol>
+            
+            <b>Notes</b>
+            <ul>
+                <li>^ beginning of a string
+                <li>$ end of a string
+                <li>\b is a word boundary
+            </ul>
+            
+            <b>Exercise 5</b>
+            <ol>
+                <li><i>How many paragraph start with 'I' as in 'I read'?</i><br>
+                '^I\b' showed 4
+                <li><i>How many paragraphs end with a question mark?</i><br>
+                '\?$' showed 1
+                <li><i>Match all words with exactly 15 letters, including hyphenated words</i><br>
+                \b[\w\-]{15}\b showed 3 matches    
+            </ol>    
+        </section>
+    </body>
+</html>
